@@ -1,88 +1,236 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home";
 }
 
-<!-- Hero Section  1-->
-<section class="vh-100 d-flex align-items-center text-center bg-light">
-    <div class="container" data-aos="fade-up">
-        <h1 class="display-4 fw-bold">Hi, I'm Nisal</h1>
-        <p class="lead">Full-Stack Developer | .NET | C# | React</p>
-        <a href="#projects" class="btn btn-primary mt-3">View Projects</a>
-    </div>
-</section>
-
-//sddcdcdcdvcv
-<!-- About Section -->
-<section class="py-5 bg-white" id="about" data-aos="fade-up">
+<!-- Home -->
+<section class="hero-section" id="home">
     <div class="container">
-        <h2 class="mb-4">About Me</h2>
-        <p>
-            I am a passionate Full-Stack Developer building web applications using ASP.NET Core, C#,
-            and modern frontend technologies. I love creating clean, responsive, and interactive
-            web experiences.
-        </p>
-    </div>
-</section>
-
-<!-- Projects Section -->
-<section class="py-5 bg-light" id="projects">
-    <div class="container">
-        <h2 class="mb-5 text-center" data-aos="fade-up">My Projects</h2>
-        <div class="row g-4">
-            <!-- Project Card 1 -->
-            <div class="col-md-4" data-aos="zoom-in">
-                <div class="card shadow rounded">
-                    <img src="~/images/project1.png" class="card-img-top" alt="Project 1">
-                    <div class="card-body">
-                        <h5 class="card-title">EMS System</h5>
-                        <p class="card-text">ASP.NET Core MVC | SQL Server | C#</p>
-                    </div>
-                </div>
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <div class="video-mask">
+                    <svg viewBox="0 0 900 320" preserveAspectRatio="xMidYMid meet">
+                        <defs>
+                            <mask id="text-mask">                              
+                                <rect width="100%" height="100%" fill="black" />
+                                <text x="50%" y="45%"
+                                      text-anchor="middle"
+                                      dominant-baseline="middle"
+                                      fill="white">
+                                    <tspan x="50%" dy="0">FULL-STACK</tspan>
+                                    <tspan x="50%" dy="120">  DEVELOPER</tspan>
+                                </text>
+                            </mask>
+                        </defs>                        
+                        <foreignObject width="100%" height="100%" mask="url(#text-mask)">
+                            <video autoplay muted loop playsinline>
+                                <source src="~/videos/video1.mp4" type="video/mp4" />
+                            </video>
+                        </foreignObject>
+                    </svg>
+                </div>                
+                <h4 class="mt-4 text-muted">
+                    ASP.NET Core | C# | SQL Server
+                </h4>
+                <p class="mt-3">
+                    I build modern, responsive web applications using
+                    ASP.NET Core MVC, C#, SQL Server and Bootstrap.
+                </p>
+                <a href="#projects" class="btn btn-primary mt-3 me-2">View Work</a>
+                <a href="#contact" class="btn btn-outline-dark mt-3">Contact Me</a>
             </div>
-
-            <!-- Project Card 2 -->
-            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
-                <div class="card shadow rounded">
-                    <img src="~/images/project2.png" class="card-img-top" alt="Project 2">
-                    <div class="card-body">
-                        <h5 class="card-title">ServeLanka App</h5>
-                        <p class="card-text">React Native | Node.js | Firebase</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project Card 3 -->
-            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
-                <div class="card shadow rounded">
-                    <img src="~/images/project3.png" class="card-img-top" alt="Project 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Portfolio Website</h5>
-                        <p class="card-text">ASP.NET Core MVC | Bootstrap | Tailwind</p>
-                    </div>
-                </div>
+            <div class="col-md-6 text-center">
+                <img src="~/images/hero.png" class="img-fluid" alt="Hero Image">
             </div>
         </div>
     </div>
 </section>
 
-<!-- Contact Section -->
-<section class="py-5 bg-white" id="contact" data-aos="fade-up">
+
+<!-- ABOUT SECTION -->
+<section class="py-5 bg-white" id="about">
     <div class="container">
-        <h2 class="mb-4">Contact Me</h2>
-        <p>
-            If you want to work together or just say hi, send me an email at:
-            <a href="mailto:nisal@example.com">nisal@example.com</a>
-        </p>
+        <div class="row align-items-center">
+
+            <!-- LEFT IMAGE -->
+            <div class="col-md-5 text-center mb-4 mb-md-0">
+                <img src="~/images/about.png"
+                     class="img-fluid rounded about-img"
+                     alt="About Me">
+            </div>
+
+            <!-- RIGHT CONTENT -->
+            <div class="col-md-7">
+                <span class="section-tag">ABOUT ME</span>
+                <h2 class="section-title">Undergraduate Software Developer</h2>
+
+                <p class="section-text">
+                    I am an ICT undergraduate at <strong>Uva Wellassa University</strong>
+                    with hands-on experience in full-stack web and mobile application development.
+                </p>
+
+                <p class="section-text">
+                    I enjoy building responsive user interfaces, RESTful backends,
+                    and database-driven applications using modern frameworks.
+                </p>
+
+                <p class="section-text">
+                    I am currently seeking a <strong>software engineering internship</strong>
+                    to apply my skills and grow in a professional environment.
+                </p>
+
+                <a href="#contact" class="btn btn-primary mt-3">Contact Me</a>
+            </div>
+
+        </div>
     </div>
 </section>
 
-<!-- Scripts for AOS -->
-@section Scripts {
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 1000,
-            once: true
-        });
-    </script>
-}
+<!-- SERVICES & SKILLS -->
+<section class="py-5 bg-light" id="services">
+    <div class="container">
+        <div class="row align-items-center">
+
+            <!-- LEFT: TEXT + SKILLS -->
+            <div class="col-md-6">
+
+                <span class="section-tag">SERVICES</span>
+                <h2 class="section-title">
+                    I offer Full-cycle Software Development
+                </h2>
+
+                <p class="section-text">
+                    I build modern, scalable, and user-friendly applications
+                    using web and mobile technologies.
+                </p>
+
+                <!-- SKILLS -->
+                <div class="skill">
+                    <span>C# / ASP.NET Core</span>
+                    <span class="float-end">85%</span>
+                    <div class="skill-bar">
+                        <div style="width:85%"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <span>JavaScript / React</span>
+                    <span class="float-end">80%</span>
+                    <div class="skill-bar">
+                        <div style="width:80%"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <span>HTML / CSS / Bootstrap</span>
+                    <span class="float-end">90%</span>
+                    <div class="skill-bar">
+                        <div style="width:90%"></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- RIGHT: SERVICE CARDS -->
+            <div class="col-md-6">
+                <div class="row g-4">
+
+                    <div class="col-md-6">
+                        <div class="service-box">
+                            <i class="fas fa-pencil-ruler"></i>
+                            <h5>Design</h5>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="service-box">
+                            <i class="fas fa-code"></i>
+                            <h5>Development</h5>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="service-box">
+                            <i class="fas fa-check-circle"></i>
+                            <h5>Quality</h5>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="service-box">
+                            <i class="fas fa-tools"></i>
+                            <h5>Maintain</h5>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- PROJECTS -->
+<section class="py-5 bg-white" id="projects">
+    <div class="container">
+
+        <span class="section-tag">PORTFOLIO</span>
+        <h2 class="section-title mb-5">
+            Each project is a unique piece of development
+        </h2>
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="project-box">
+                    <img src="~/images/project1.png" alt="">
+                    <div class="project-info">
+                        <h5>YummyFeels</h5>
+                        <p>Food Ordering System</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="project-box">
+                    <img src="~/images/project2.png" alt="">
+                    <div class="project-info">
+                        <h5>SkillNet</h5>
+                        <p>Skill Sharing Platform</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="project-box">
+                    <img src="~/images/project3.png" alt="">
+                    <div class="project-info">
+                        <h5>ServeLanka</h5>
+                        <p>Service Provider App</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-white" id="contact">
+    <div class="container text-center">
+        <h2 class="section-title">Contact Me</h2>
+
+        <p>📍 Balangoda, Sri Lanka</p>
+        <p>📧 <a href="mailto:nisalkawshalya555@gmail.com">nisalkawshalya555@gmail.com</a></p>
+        <p>📞 +94 76 084 9549</p>
+
+        <div class="social-links mt-3">
+            <a href="https://github.com/Nisal-Kawshalya" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/nisal-kawshalya" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
