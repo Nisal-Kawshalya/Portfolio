@@ -2,163 +2,183 @@
     ViewData["Title"] = "Home";
 }
 
-<!-- Home -->
+<!--  HERO  -->
 <section class="hero-section" id="home">
     <div class="container">
         <div class="row align-items-center">
+
             <div class="col-md-6">
+
+                <!-- VIDEO TEXT MASK -->
                 <div class="video-mask">
                     <svg viewBox="0 0 900 320" preserveAspectRatio="xMidYMid meet">
                         <defs>
-                            <mask id="text-mask">                              
+                            <mask id="text-mask">
                                 <rect width="100%" height="100%" fill="black" />
                                 <text x="50%" y="45%"
                                       text-anchor="middle"
                                       dominant-baseline="middle"
                                       fill="white">
                                     <tspan x="50%" dy="0">FULL-STACK</tspan>
-                                    <tspan x="50%" dy="120">  DEVELOPER</tspan>
+                                    <tspan x="50%" dy="120">DEVELOPER</tspan>
                                 </text>
                             </mask>
-                        </defs>                        
+                        </defs>
+
                         <foreignObject width="100%" height="100%" mask="url(#text-mask)">
                             <video autoplay muted loop playsinline>
-                                <source src="~/videos/video1.mp4" type="video/mp4" />
+                                <source src="/videos/video1.mp4" type="video/mp4" />
                             </video>
                         </foreignObject>
                     </svg>
-                </div>                
-                <h4 class="mt-4 text-muted">
-                    ASP.NET Core | C# | SQL Server
-                </h4>
+                </div>
                 <p class="mt-3">
-                    I build modern, responsive web applications using
-                    ASP.NET Core MVC, C#, SQL Server and Bootstrap.
+                    Hi, I’m Nisal Kawshalya, 
+                    an ICT undergraduate at Uva Wellassa University.
                 </p>
-                <a href="#projects" class="btn btn-primary mt-3 me-2">View Work</a>
-                <a href="#contact" class="btn btn-outline-dark mt-3">Contact Me</a>
+
+                <div class="knowledge-wrapper mt-5">
+
+                    <span class="knowledge-text">High knowledge on softwares</span>
+
+                    <div class="knowledge-icons">
+                        <div class="tech-icon html"><i class="fab fa-html5"></i></div>
+                        <div class="tech-icon css"><i class="fab fa-css3-alt"></i></div>
+                        <div class="tech-icon js"><i class="fab fa-js"></i></div>
+                        <div class="tech-icon react"><i class="fab fa-react"></i></div>
+                        <div class="tech-icon python"><i class="fab fa-python"></i></div>
+                        <div class="tech-icon java"><i class="fab fa-java"></i></div>                        
+                    </div>
+
+                </div>
             </div>
+
             <div class="col-md-6 text-center">
-                <img src="~/images/hero.png" class="img-fluid" alt="Hero Image">
+                <img src="/images/mypic1.jpg" class="hero-img" alt="profile">
             </div>
+
         </div>
     </div>
 </section>
 
-
-<!-- ABOUT SECTION -->
+<!--  ABOUT  -->
 <section class="py-5 bg-white" id="about">
     <div class="container">
         <div class="row align-items-center">
 
             <!-- LEFT IMAGE -->
             <div class="col-md-5 text-center mb-4 mb-md-0">
-                <img src="~/images/about.png"
-                     class="img-fluid rounded about-img"
-                     alt="About Me">
+                <img src="/images/mypic1.jpg" class="img-fluid rounded about-img" alt="About Me">
             </div>
 
             <!-- RIGHT CONTENT -->
             <div class="col-md-7">
+
                 <span class="section-tag">ABOUT ME</span>
                 <h2 class="section-title">Undergraduate Software Developer</h2>
 
                 <p class="section-text">
-                    I am an ICT undergraduate at <strong>Uva Wellassa University</strong>
-                    with hands-on experience in full-stack web and mobile application development.
+                    I am <strong>Nisal Kawshalya</strong>, an ICT undergraduate at
+                    <strong>Uva Wellassa University of Sri Lanka</strong>,
+                    with a strong interest in full-stack web and mobile application development.
                 </p>
 
                 <p class="section-text">
-                    I enjoy building responsive user interfaces, RESTful backends,
-                    and database-driven applications using modern frameworks.
+                    I have hands-on experience developing real-world applications using
+                    <strong>ASP.NET Core</strong>, <strong>C#</strong>,
+                    <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>,
+                    <strong>React</strong>, and <strong>React Native</strong>.
                 </p>
 
                 <p class="section-text">
-                    I am currently seeking a <strong>software engineering internship</strong>
-                    to apply my skills and grow in a professional environment.
+                    I enjoy building responsive user interfaces, secure REST APIs,
+                    and database-driven systems using
+                    <strong>SQL Server</strong>, <strong>MySQL</strong>, and <strong>Firebase</strong>.
                 </p>
 
-                <a href="#contact" class="btn btn-primary mt-3">Contact Me</a>
+                <p class="section-text">
+                    I am a quick learner, team-oriented individual, and currently seeking
+                    a <strong>Software Engineering Internship</strong> to gain industry exposure
+                    and further enhance my technical skills.
+                </p>
+
+                <div class="mt-4">
+                    <a href="#projects" class="btn btn-primary me-2">View Projects</a>
+                    <a href="/document/Nisal Kawshalya_CV.pdf" class="btn btn-outline-dark" target="_blank">
+                        View CV
+                    </a>
+
+                </div>
+
             </div>
 
         </div>
     </div>
 </section>
 
-<!-- SERVICES & SKILLS -->
+
+
+
+<!--  SERVICES & SKILLS  -->
 <section class="py-5 bg-light" id="services">
     <div class="container">
         <div class="row align-items-center">
 
-            <!-- LEFT: TEXT + SKILLS -->
             <div class="col-md-6">
-
                 <span class="section-tag">SERVICES</span>
-                <h2 class="section-title">
-                    I offer Full-cycle Software Development
-                </h2>
+                <h2 class="section-title">Full-cycle Software Development</h2>
 
-                <p class="section-text">
-                    I build modern, scalable, and user-friendly applications
-                    using web and mobile technologies.
-                </p>
-
-                <!-- SKILLS -->
                 <div class="skill">
                     <span>C# / ASP.NET Core</span>
                     <span class="float-end">85%</span>
-                    <div class="skill-bar">
-                        <div style="width:85%"></div>
-                    </div>
+                    <div class="skill-bar"><div style="width:85%"></div></div>
                 </div>
 
                 <div class="skill">
                     <span>JavaScript / React</span>
                     <span class="float-end">80%</span>
-                    <div class="skill-bar">
-                        <div style="width:80%"></div>
-                    </div>
+                    <div class="skill-bar"><div style="width:80%"></div></div>
                 </div>
 
                 <div class="skill">
                     <span>HTML / CSS / Bootstrap</span>
                     <span class="float-end">90%</span>
-                    <div class="skill-bar">
-                        <div style="width:90%"></div>
-                    </div>
+                    <div class="skill-bar"><div style="width:90%"></div></div>
                 </div>
-
             </div>
 
-            <!-- RIGHT: SERVICE CARDS -->
             <div class="col-md-6">
                 <div class="row g-4">
 
                     <div class="col-md-6">
                         <div class="service-box">
-                            <i class="fas fa-pencil-ruler"></i>
-                            <h5>Design</h5>
+                            <i class="fas fa-globe"></i>
+                            <h5>Web Development</h5>
+                            <p>ASP.NET MVC, Bootstrap</p>
                         </div>
                     </div>
 
                     <div class="col-md-6">
                         <div class="service-box">
-                            <i class="fas fa-code"></i>
-                            <h5>Development</h5>
+                            <i class="fas fa-server"></i>
+                            <h5>Backend & APIs</h5>
+                            <p>REST APIs, Authentication</p>
                         </div>
                     </div>
 
                     <div class="col-md-6">
                         <div class="service-box">
-                            <i class="fas fa-check-circle"></i>
-                            <h5>Quality</h5>
+                            <i class="fas fa-mobile-alt"></i>
+                            <h5>Mobile Apps</h5>
+                            <p>React Native</p>
                         </div>
                     </div>
 
                     <div class="col-md-6">
                         <div class="service-box">
-                            <i class="fas fa-tools"></i>
-                            <h5>Maintain</h5>
+                            <i class="fas fa-database"></i>
+                            <h5>Databases</h5>
+                            <p>SQL Server, Firebase</p>
                         </div>
                     </div>
 
@@ -169,31 +189,31 @@
     </div>
 </section>
 
-
-<!-- PROJECTS -->
+<!--  PROJECTS  -->
 <section class="py-5 bg-white" id="projects">
     <div class="container">
 
         <span class="section-tag">PORTFOLIO</span>
-        <h2 class="section-title mb-5">
-            Each project is a unique piece of development
-        </h2>
+        <h2 class="section-title mb-5">Each project is a unique piece of development</h2>
 
         <div class="row g-4">
 
+            <!-- YUMMYFEELS -->
             <div class="col-md-4">
-                <div class="project-box">
-                    <img src="~/images/project1.png" alt="">
-                    <div class="project-info">
-                        <h5>YummyFeels</h5>
-                        <p>Food Ordering System</p>
+                <a href="/Projects/YummyFeels" class="text-decoration-none text-dark">
+                    <div class="project-box">
+                        <img src="/images/projects/YummyFeels/1.png">
+                        <div class="project-info">
+                            <h5>YummyFeels</h5>
+                            <p>Food Ordering System</p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
-
+            <!-- SKILLNET -->
             <div class="col-md-4">
                 <div class="project-box">
-                    <img src="~/images/project2.png" alt="">
+                    <img src="/images/project2.png">
                     <div class="project-info">
                         <h5>SkillNet</h5>
                         <p>Skill Sharing Platform</p>
@@ -201,9 +221,10 @@
                 </div>
             </div>
 
+            <!-- SERVELANKA -->
             <div class="col-md-4">
                 <div class="project-box">
-                    <img src="~/images/project3.png" alt="">
+                    <img src="/images/project3.png">
                     <div class="project-info">
                         <h5>ServeLanka</h5>
                         <p>Service Provider App</p>
@@ -215,22 +236,77 @@
     </div>
 </section>
 
-<section class="py-5 bg-white" id="contact">
-    <div class="container text-center">
-        <h2 class="section-title">Contact Me</h2>
+<!--  CONTACT  -->
+<section id="contact" class="py-5">
+    <div class="container">
+        <div class="row g-4 align-items-stretch">
 
-        <p>📍 Balangoda, Sri Lanka</p>
-        <p>📧 <a href="mailto:nisalkawshalya555@gmail.com">nisalkawshalya555@gmail.com</a></p>
-        <p>📞 +94 76 084 9549</p>
+            <!-- LEFT side -->
+            <div class="col-md-8">
+                <div class="contact-box">
+                    <h2 class="contact-title">Let's work together</h2>
+                    <form asp-controller="Contact" asp-action="Send" method="post">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <input name="FirstName" class="form-control" placeholder="First name" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <input name="LastName" class="form-control" placeholder="Last name" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <input name="Email" type="email" class="form-control" placeholder="Email address" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <input name="Phone" class="form-control" placeholder="Phone number">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <select name="Service" class="form-control">
+                                <option>Select a service</option>
+                                <option>Web Development</option>
+                                <option>Mobile App</option>
+                                <option>Backend API</option>
+                            </select>
+                        </div>
+                        <div class="mb-4">
+                            <textarea name="Message" rows="5" class="form-control"
+                                      placeholder="Type your message here..." required></textarea>
+                        </div>
+                        <button class="btn btn-primary px-4">Send message</button>
+                    </form>
+                </div>
+            </div>
 
-        <div class="social-links mt-3">
-            <a href="https://github.com/Nisal-Kawshalya" target="_blank">
-                <i class="fab fa-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/nisal-kawshalya" target="_blank">
-                <i class="fab fa-linkedin"></i>
-            </a>
+            <!-- RIGHT INFO -->
+            <div class="col-md-4">
+                <div class="contact-info">
+                    <div class="info-card">
+                        <i class="fas fa-phone"></i>
+                        <p>+94 76 084 9549</p>
+                    </div>
+
+                    <div class="info-card">
+                        <i class="fas fa-envelope"></i>
+                        <p>nisalkawshalya555@gmail.com</p>
+                    </div>
+
+                    <div class="info-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Balangoda, Sri Lanka</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success mt-3">
+        @TempData["Success"]
+    </div>
+}
 

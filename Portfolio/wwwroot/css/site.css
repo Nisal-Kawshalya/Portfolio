@@ -1,5 +1,19 @@
 ﻿/* =========================
-   COLOR THEME (GLOBAL)
+   GLOBAL RESET & FIXES
+========================= */
+html, body {
+    height: auto;
+    overflow-x: hidden;
+}
+
+/* Space for footer */
+main {
+    display: block;
+    padding-bottom: 140px;
+}
+
+/* =========================
+   COLOR THEME
 ========================= */
 :root {
     --primary: #0d6efd;
@@ -23,31 +37,36 @@ h1, h2, h3, h4, h5 {
 }
 
 /* =========================
-   HERO SECTION
+   HERO SECTION (FIXED)
 ========================= */
 .hero-section {
-    min-height: 100vh;
+    min-height: calc(100vh - 80px); /* subtract fixed navbar */
     display: flex;
     align-items: center;
-    background: var(--white);
+}
+
+.hero-img {
+    width: 420px;
+    max-width: none;
+    border-radius: 0 0 230px 230px;
+    margin-left: 140px;
 }
 
 /* =========================
-   VIDEO TEXT MASK
+   VIDEO MASK
 ========================= */
 .video-mask {
     width: 100%;
     height: 320px;
 }
 
-    .video-mask svg {
+    .video-mask svg,
+    .video-mask video {
         width: 100%;
         height: 100%;
     }
 
     .video-mask video {
-        width: 100%;
-        height: 100%;
         object-fit: cover;
     }
 
@@ -56,7 +75,6 @@ h1, h2, h3, h4, h5 {
         font-weight: 900;
         letter-spacing: 4px;
         text-transform: uppercase;
-        font-family: 'Poppins', sans-serif;
     }
 
 /* =========================
@@ -68,8 +86,8 @@ h1, h2, h3, h4, h5 {
     letter-spacing: 2px;
     font-size: 14px;
     text-transform: uppercase;
-    display: inline-block;
     margin-bottom: 10px;
+    display: inline-block;
 }
 
 .section-title {
@@ -83,26 +101,96 @@ h1, h2, h3, h4, h5 {
     line-height: 1.8;
 }
 
+    .section-text strong {
+        color: var(--dark);
+    }
+
 /* =========================
-   ABOUT SECTION
+   ABOUT
 ========================= */
 .about-img {
     max-width: 90%;
-    border-radius: 16px;
+    border-radius: 20px;
 }
 
 /* =========================
-   SERVICES + SKILLS
+   KNOWLEDGE ICONS
+========================= */
+.knowledge-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.knowledge-text {
+    max-width: 130px;
+    font-size: 14px;
+}
+
+.knowledge-icons {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.tech-icon {
+    width: 68px;
+    height: 68px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 14px 35px rgba(0,0,0,0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 34px;
+    transition: 0.3s ease;
+}
+
+    .tech-icon:hover {
+        transform: translateY(-6px);
+    }
+
+    /* Tech colors */
+    .tech-icon.html i {
+        color: #e34f26;
+    }
+
+    .tech-icon.css i {
+        color: #1572b6;
+    }
+
+    .tech-icon.js i {
+        color: #f7df1e;
+    }
+
+    .tech-icon.react i {
+        color: #61dafb;
+    }
+
+    .tech-icon.python i {
+        color: #3776ab;
+    }
+
+    .tech-icon.java i {
+        color: #f89820;
+    }
+
+    .tech-icon.bootstrap i {
+        color: #7952b3;
+    }
+
+    .tech-icon.git i {
+        color: #f05032;
+    }
+
+/* =========================
+   SERVICES & SKILLS
 ========================= */
 .skill {
     margin-bottom: 16px;
     font-size: 14px;
     font-weight: 600;
 }
-
-    .skill span {
-        display: inline-block;
-    }
 
 .skill-bar {
     background: #e0e0e0;
@@ -118,37 +206,13 @@ h1, h2, h3, h4, h5 {
         border-radius: 10px;
     }
 
-/* Service cards (right side) */
-.service-box {
-    background: var(--white);
-    padding: 40px 20px;
-    border-radius: 18px;
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-    transition: 0.3s ease;
-}
-
-    .service-box i {
-        font-size: 38px;
-        color: var(--primary);
-        margin-bottom: 15px;
-    }
-
-    .service-box h5 {
-        font-weight: 700;
-    }
-
-    .service-box:hover {
-        transform: translateY(-10px);
-    }
-
 /* =========================
-   PROJECT / PORTFOLIO
+   PROJECTS
 ========================= */
 .project-box {
     border-radius: 18px;
     overflow: hidden;
-    background: var(--white);
+    background: #fff;
     box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     transition: 0.3s ease;
 }
@@ -167,83 +231,79 @@ h1, h2, h3, h4, h5 {
     padding: 16px;
 }
 
-    .project-info h5 {
-        font-weight: 700;
-    }
-
-    .project-info p {
-        font-size: 14px;
-        color: #666;
-    }
-
 /* =========================
-   BUTTONS
+   CONTACT
 ========================= */
-.btn-primary {
-    background-color: var(--primary);
-    border-color: var(--primary);
-    padding: 12px 28px;
-    font-weight: 600;
+.contact-box {
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
 }
 
-.btn-outline-dark {
-    border: 2px solid var(--dark);
-    color: var(--dark);
-    padding: 12px 28px;
-    font-weight: 600;
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-    .btn-outline-dark:hover {
-        background-color: var(--dark);
-        color: var(--white);
-    }
-
 /* =========================
-   SOCIAL LINKS
+   FOOTER (FIXED)
 ========================= */
-.social-links a {
-    font-size: 24px;
-    margin: 0 10px;
-    color: var(--dark);
+.site-footer {
+    background: #0b0f19;
+    color: #ccc;
+    padding: 50px 0 20px;
+    margin-top: 100px;
+    width: 100%;
+}
+
+.footer-name {
+    color: #fff;
+    font-weight: 700;
+}
+
+.footer-social a {
+    width: 42px;
+    height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    border-radius: 50%;
+    background: #1a1f2e;
+    color: #fff;
+    font-size: 18px;
     transition: 0.3s ease;
 }
 
-    .social-links a:hover {
-        color: var(--primary);
+    .footer-social a:hover {
+        background: var(--primary);
+        transform: translateY(-4px);
     }
 
-/* =========================
-   SECTION BACKGROUNDS
-========================= */
-#services,
-#projects {
-    background-color: var(--light-bg);
+.footer-line {
+    border-color: rgba(255,255,255,0.15);
+    margin: 30px 0 15px;
+}
+
+.footer-bottom {
+    font-size: 13px;
+    color: #aaa;
+    text-align: center;
 }
 
 /* =========================
-   MOBILE RESPONSIVE
+   MOBILE
 ========================= */
 @media (max-width: 768px) {
-
-    .video-mask {
-        height: 180px;
+    .hero-img {
+        width: 280px;
+        margin-left: 0;
     }
-
-        .video-mask text {
-            font-size: 52px;
-            letter-spacing: 2px;
-        }
 
     .section-title {
         font-size: 28px;
         text-align: center;
-    }
-
-    .section-text {
-        text-align: center;
-    }
-
-    .service-box {
-        padding: 30px 15px;
     }
 }
