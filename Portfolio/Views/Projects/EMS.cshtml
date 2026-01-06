@@ -1,0 +1,139 @@
+﻿@{
+    ViewData["Title"] = "EMS";
+}
+
+<section class="project-hero py-5">
+    <div class="container">
+
+        <!-- BACK BUTTON -->
+        <a href="/#projects" class="btn btn-outline-dark mb-4">
+            ← Back to Projects
+        </a>
+
+        <!-- PROJECT IMAGE -->
+        <div class="project-image-wrapper">
+            <img src="/images/projects/EMS/1.png" alt="EMS Project">
+        </div>
+
+        <!-- PROJECT CONTENT -->
+        <div class="project-content mt-5">
+
+            <h1 class="project-title">EMS</h1>
+            <p class="project-subtitle">
+                Attendance, Homework & Academic Management System
+            </p>
+
+            <p class="project-description">
+                <strong>EMS (Education Management System)</strong> is a web-based platform
+                developed to manage student attendance, academic results, announcements,
+                and homework sharing in an efficient and structured manner. The system
+                supports <strong>Teachers, Students, and Parents</strong> with role-based
+                access and dashboards.
+            </p>
+
+            <p class="project-description">
+                The platform was designed to improve communication between teachers,
+                students, and parents while ensuring transparency in attendance tracking
+                and academic performance monitoring.
+            </p>
+
+            <!-- USER ROLES -->
+            <h5 class="mt-4">User Roles</h5>
+            <ul class="project-tech">
+                <li><strong>Teacher (Admin)</strong></li>
+                <li><strong>Student</strong></li>
+                <li><strong>Parent</strong></li>
+            </ul>
+
+            <!-- TEACHER FEATURES -->
+            <h5 class="mt-4">Teacher (Admin) Features</h5>
+            <ul class="project-tech">
+                <li>Teacher registration using name, email, phone number, teacher ID, and password</li>
+                <li>Dashboard showing total students in each class</li>
+                <li>View, manage, and remove students from classes</li>
+                <li>Attendance marking with filters (Grade & Place)</li>
+                <li>Create announcements for students</li>
+                <li>Create exam result posts with title and exam date</li>
+                <li>Update results for each student using attendance sheets</li>
+            </ul>
+
+            <!-- STUDENT FEATURES -->
+            <h5 class="mt-4">Student Features</h5>
+            <ul class="project-tech">
+                <li>Student registration with unique email and phone number</li>
+                <li>Join classes using teacher ID, grade, and place</li>
+                <li>Student dashboard showing enrolled classes</li>
+                <li>View attendance status, exam results, and announcements</li>
+            </ul>
+
+            <!-- PARENT FEATURES -->
+            <h5 class="mt-4">Parent Features</h5>
+            <ul class="project-tech">
+                <li>Parent access from landing page</li>
+                <li>Add child using student email and phone number</li>
+                <li>View all classes of their child</li>
+                <li>Monitor attendance, results, and announcements</li>
+            </ul>
+
+            <!-- TECHNOLOGY STACK -->
+            <h5 class="mt-4">Technologies Used</h5>
+            <ul class="project-tech">
+                <li>.NET 8</li>
+                <li>ASP.NET Core MVC</li>
+                <li>C#</li>
+                <li>HTML, CSS, JavaScript</li>
+                <li>SQLite Database</li>
+                <li>Visual Studio</li>
+            </ul>
+
+            <!-- ARCHITECTURE -->
+            <h5 class="mt-4">System Architecture</h5>
+            <p class="project-description">
+                The system follows the <strong>MVC (Model–View–Controller)</strong>
+                architecture to ensure separation of concerns, maintainability,
+                and scalability. SQLite is used as a lightweight database solution
+                for efficient local data management.
+            </p>
+
+            <!-- OUTCOME -->
+            <h5 class="mt-4">Expected Outcome</h5>
+            <ul class="project-tech">
+                <li>Improved attendance tracking and academic transparency</li>
+                <li>Better communication between teachers, students, and parents</li>
+                <li>Centralized academic data management</li>
+                <li>User-friendly dashboards for all roles</li>
+            </ul>
+
+        </div>
+
+        <!-- IMAGE SLIDER -->
+        <div id="emsCarousel" class="carousel slide mt-5">
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                    <img src="/images/projects/EMS/1.png" class="d-block w-100">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="/images/projects/EMS/2.png" class="d-block w-100">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="/images/projects/EMS/3.png" class="d-block w-100">
+                </div>
+
+            </div>
+
+            <button class="carousel-control-prev" type="button"
+                    data-bs-target="#emsCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+
+            <button class="carousel-control-next" type="button"
+                    data-bs-target="#emsCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+
+    </div>
+</section>

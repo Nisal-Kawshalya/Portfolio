@@ -1,22 +1,484 @@
+﻿/* =========================
+   GLOBAL RESET & FIXES
+========================= */
+html, body {
+    height: auto;
+    overflow-x: hidden;
+}
 html {
-  font-size: 14px;
+    scroll-behavior: smooth;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+
+/* Space for footer */
+main {
+    display: block;
+    padding-bottom: 140px;
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+/* =========================
+   COLOR THEME
+========================= */
+:root {
+    --primary: #0d6efd;
+    --dark: #0b0f19;
+    --gray: #555555;
+    --light-bg: #f8f9fa;
+    --white: #ffffff;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
-}
-
+/* =========================
+   BASE
+========================= */
 body {
-  margin-bottom: 60px;
+    font-family: 'Poppins', sans-serif;
+    color: var(--gray);
+    background-color: var(--white);
 }
+
+h1, h2, h3, h4, h5 {
+    color: var(--dark);
+}
+
+/* Navbar */
+
+.navbar .nav-link {
+    font-weight: 500;
+    margin-left: 18px;
+}
+
+    .navbar .nav-link:hover {
+        color: var(--primary);
+    }
+
+/* =========================
+   HERO SECTION (FIXED)
+========================= */
+.hero-section {
+    min-height: calc(100vh - 80px); /* subtract fixed navbar */
+    display: flex;
+    align-items: center;
+}
+
+.hero-img {
+    width: 420px;
+    max-width: none;
+    border-radius: 0 0 230px 230px;
+    margin-left: 140px;
+}
+
+/* =========================
+   VIDEO MASK
+========================= */
+.video-mask {
+    width: 100%;
+    height: 320px;
+}
+
+    .video-mask svg,
+    .video-mask video {
+        width: 100%;
+        height: 100%;
+    }
+
+    .video-mask video {
+        object-fit: cover;
+    }
+
+    .video-mask text {
+        font-size: 120px;
+        font-weight: 900;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+    }
+
+/* =========================
+   SECTION HEADERS
+========================= */
+.section-tag {
+    color: var(--primary);
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.section-text {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+    .section-text strong {
+        color: var(--dark);
+    }
+
+/* =========================
+   ABOUT
+========================= */
+.about-img {
+    max-width: 90%;
+    border-radius: 20px;
+}
+
+/* =========================
+   KNOWLEDGE ICONS
+========================= */
+.knowledge-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.knowledge-text {
+    max-width: 130px;
+    font-size: 14px;
+}
+
+.knowledge-icons {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.tech-icon {
+    width: 68px;
+    height: 68px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 14px 35px rgba(0,0,0,0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 34px;
+    transition: 0.3s ease;
+}
+
+    .tech-icon:hover {
+        transform: translateY(-6px);
+    }
+
+    /* Tech colors */
+    .tech-icon.html i {
+        color: #e34f26;
+    }
+
+    .tech-icon.css i {
+        color: #1572b6;
+    }
+
+    .tech-icon.js i {
+        color: #f7df1e;
+    }
+
+    .tech-icon.react i {
+        color: #61dafb;
+    }
+
+    .tech-icon.python i {
+        color: #3776ab;
+    }
+
+    .tech-icon.java i {
+        color: #f89820;
+    }
+
+    .tech-icon.bootstrap i {
+        color: #7952b3;
+    }
+
+    .tech-icon.git i {
+        color: #f05032;
+    }
+
+/* =========================
+   SERVICES & SKILLS
+========================= */
+.skill {
+    margin-bottom: 16px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.skill-bar {
+    background: #e0e0e0;
+    height: 6px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 6px;
+}
+
+    .skill-bar div {
+        height: 100%;
+        background: var(--primary);
+        border-radius: 10px;
+    }
+
+
+/* =========================
+   MODERN SERVICE GRID
+========================= */
+.service-grid-modern {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+
+/* =========================
+   AGENCY STYLE SERVICES
+========================= */
+.service-grid-agency {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 35px;
+}
+
+/* Tall cards */
+.service-card-modern {
+    height: 220px;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid rgba(0,0,0,0.08);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.service-grid-modern {
+    display: grid;
+    grid-template-columns: repeat(2, 260px); /* ⬅ fixed width cards */
+    gap: 30px;
+    justify-content: center; /* center grid */
+}
+    /* Icon styling */
+    .service-card-modern i {
+        font-size: 40px;
+        margin-bottom: 16px;
+    }
+
+    /* Title styling */
+    .service-card-modern h5 {
+        font-size: 18px;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    /* Hover */
+    .service-card-modern:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 25px 50px rgba(0,0,0,0.1);
+    }
+
+    /* Staggered layout (like screenshot) */
+    .service-card-modern:nth-child(2) {
+        margin-top: -40px;
+    }
+
+    .service-card-modern:nth-child(4) {
+        margin-top: -40px;
+    }
+
+
+    /* =========================
+   SERVICE COLORS (ICON ONLY)
+========================= */
+.service-card-modern.web i {
+    color: var(--primary);
+}
+
+.service-card-modern.backend i {
+    color: var(--primary);
+}
+
+.service-card-modern.mobile i {
+    color: var(--primary);
+}
+
+.service-card-modern.database i {
+    color: var(--primary);
+}
+
+
+
+/* =========================
+   PROJECTS
+========================= */
+.project-box {
+    border-radius: 18px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+    .project-box img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+    }
+
+    .project-box:hover {
+        transform: translateY(-10px);
+    }
+
+.project-info {
+    padding: 16px;
+}
+/* =========================
+   PROJECT IMAGE SIZE CONTROL
+========================= */
+.project-image-wrapper {
+    max-width: 700px; /* ⬅ control overall size */
+    margin: 0 auto; /* center horizontally */
+}
+
+    .project-image-wrapper img {
+        width: 100%;
+        height: auto;
+        border-radius: 18px;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    }
+
+
+/* =========================
+   CONTACT
+========================= */
+.contact-box {
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+/* =========================
+   CONTACT INFO CARDS
+========================= */
+.info-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 18px 20px;
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid rgba(0,0,0,0.08);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.05);
+    transition: 0.3s ease;
+}
+
+    .info-card i {
+        width: 42px;
+        height: 42px;
+        background: var(--primary);
+        color: #fff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+    }
+
+    .info-card p {
+        margin: 0;
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--dark);
+    }
+
+    .info-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 20px 45px rgba(0,0,0,0.08);
+    }
+
+
+/* =========================
+   FOOTER (FIXED)
+========================= */
+.site-footer {
+    background: #0b0f19;
+    color: #ccc;
+    padding: 50px 0 20px;
+    margin-top: 100px;
+    width: 100%;
+}
+
+.footer-name {
+    color: #fff;
+    font-weight: 700;
+}
+
+.footer-social a {
+    width: 42px;
+    height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    border-radius: 50%;
+    background: #1a1f2e;
+    color: #fff;
+    font-size: 18px;
+    transition: 0.3s ease;
+}
+
+    .footer-social a:hover {
+        background: var(--primary);
+        transform: translateY(-4px);
+    }
+
+.footer-line {
+    border-color: rgba(255,255,255,0.15);
+    margin: 30px 0 15px;
+}
+
+.footer-bottom {
+    font-size: 13px;
+    color: #aaa;
+    text-align: center;
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 768px) {
+    .hero-img {
+        width: 280px;
+        margin-left: 0;
+    }
+
+    .section-title {
+        font-size: 28px;
+        text-align: center;
+    }
+}
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+@media (max-width: 991px) {
+    .service-grid-modern {
+        grid-template-columns: 1fr;
+        margin-top: 40px;
+    }
+}
+
+    .service-card-modern {
+        width: 100%;
+        height: 200px;
+    }
+
