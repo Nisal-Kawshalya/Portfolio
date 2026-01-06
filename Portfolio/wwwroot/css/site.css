@@ -5,6 +5,10 @@ html, body {
     height: auto;
     overflow-x: hidden;
 }
+html {
+    scroll-behavior: smooth;
+}
+
 
 /* Space for footer */
 main {
@@ -35,6 +39,17 @@ body {
 h1, h2, h3, h4, h5 {
     color: var(--dark);
 }
+
+/* Navbar */
+
+.navbar .nav-link {
+    font-weight: 500;
+    margin-left: 18px;
+}
+
+    .navbar .nav-link:hover {
+        color: var(--primary);
+    }
 
 /* =========================
    HERO SECTION (FIXED)
@@ -206,6 +221,97 @@ h1, h2, h3, h4, h5 {
         border-radius: 10px;
     }
 
+
+/* =========================
+   MODERN SERVICE GRID
+========================= */
+.service-grid-modern {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+
+/* =========================
+   AGENCY STYLE SERVICES
+========================= */
+.service-grid-agency {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 35px;
+}
+
+/* Tall cards */
+.service-card-modern {
+    height: 220px;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid rgba(0,0,0,0.08);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.service-grid-modern {
+    display: grid;
+    grid-template-columns: repeat(2, 260px); /* ⬅ fixed width cards */
+    gap: 30px;
+    justify-content: center; /* center grid */
+}
+    /* Icon styling */
+    .service-card-modern i {
+        font-size: 40px;
+        margin-bottom: 16px;
+    }
+
+    /* Title styling */
+    .service-card-modern h5 {
+        font-size: 18px;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    /* Hover */
+    .service-card-modern:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 25px 50px rgba(0,0,0,0.1);
+    }
+
+    /* Staggered layout (like screenshot) */
+    .service-card-modern:nth-child(2) {
+        margin-top: -40px;
+    }
+
+    .service-card-modern:nth-child(4) {
+        margin-top: -40px;
+    }
+
+
+    /* =========================
+   SERVICE COLORS (ICON ONLY)
+========================= */
+.service-card-modern.web i {
+    color: var(--primary);
+}
+
+.service-card-modern.backend i {
+    color: var(--primary);
+}
+
+.service-card-modern.mobile i {
+    color: var(--primary);
+}
+
+.service-card-modern.database i {
+    color: var(--primary);
+}
+
+
+
 /* =========================
    PROJECTS
 ========================= */
@@ -230,6 +336,21 @@ h1, h2, h3, h4, h5 {
 .project-info {
     padding: 16px;
 }
+/* =========================
+   PROJECT IMAGE SIZE CONTROL
+========================= */
+.project-image-wrapper {
+    max-width: 700px; /* ⬅ control overall size */
+    margin: 0 auto; /* center horizontally */
+}
+
+    .project-image-wrapper img {
+        width: 100%;
+        height: auto;
+        border-radius: 18px;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    }
+
 
 /* =========================
    CONTACT
@@ -246,6 +367,45 @@ h1, h2, h3, h4, h5 {
     flex-direction: column;
     gap: 20px;
 }
+/* =========================
+   CONTACT INFO CARDS
+========================= */
+.info-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 18px 20px;
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid rgba(0,0,0,0.08);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.05);
+    transition: 0.3s ease;
+}
+
+    .info-card i {
+        width: 42px;
+        height: 42px;
+        background: var(--primary);
+        color: #fff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+    }
+
+    .info-card p {
+        margin: 0;
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--dark);
+    }
+
+    .info-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 20px 45px rgba(0,0,0,0.08);
+    }
+
 
 /* =========================
    FOOTER (FIXED)
@@ -307,3 +467,18 @@ h1, h2, h3, h4, h5 {
         text-align: center;
     }
 }
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+@media (max-width: 991px) {
+    .service-grid-modern {
+        grid-template-columns: 1fr;
+        margin-top: 40px;
+    }
+}
+
+    .service-card-modern {
+        width: 100%;
+        height: 200px;
+    }
+

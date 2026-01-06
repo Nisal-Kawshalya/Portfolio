@@ -18,5 +18,15 @@ namespace Portfolio.Controllers
         {
             return View();
         }
+
+        public IActionResult EMS()
+        {
+            return View();
+        }
+
+        public IActionResult QuickQuiz()
+        {
+            return View();
+        }
     }
 }

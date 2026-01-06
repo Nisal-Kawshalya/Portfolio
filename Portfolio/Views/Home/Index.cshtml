@@ -2,7 +2,7 @@
     ViewData["Title"] = "Home";
 }
 
-<!--  HERO  -->
+<!-- ================= HERO ================= -->
 <section class="hero-section" id="home">
     <div class="container">
         <div class="row align-items-center">
@@ -19,7 +19,7 @@
                                       text-anchor="middle"
                                       dominant-baseline="middle"
                                       fill="white">
-                                    <tspan x="50%" dy="0">FULL-STACK</tspan>
+                                    <tspan x="50%" dy="0">FULL STACK</tspan>
                                     <tspan x="50%" dy="120">DEVELOPER</tspan>
                                 </text>
                             </mask>
@@ -122,9 +122,10 @@
 <!--  SERVICES & SKILLS  -->
 <section class="py-5 bg-light" id="services">
     <div class="container">
-        <div class="row align-items-center">
+        <div class="row align-items-start">
 
-            <div class="col-md-6">
+            <!-- LEFT : Skills -->
+            <div class="col-lg-6 pe-lg-5">
                 <span class="section-tag">SERVICES</span>
                 <h2 class="section-title">Full-cycle Software Development</h2>
 
@@ -147,45 +148,35 @@
                 </div>
             </div>
 
-            <div class="col-md-6">
-                <div class="row g-4">
+            <!-- RIGHT : Services -->
+            <div class="col-lg-6 ps-lg-4">
+                <div class="service-grid-modern">
 
-                    <div class="col-md-6">
-                        <div class="service-box">
-                            <i class="fas fa-globe"></i>
-                            <h5>Web Development</h5>
-                            <p>ASP.NET MVC, Bootstrap</p>
-                        </div>
+                    <div class="service-card-modern web">
+                        <i class="fas fa-globe"></i>
+                        <h5>Web Development</h5>
                     </div>
 
-                    <div class="col-md-6">
-                        <div class="service-box">
-                            <i class="fas fa-server"></i>
-                            <h5>Backend & APIs</h5>
-                            <p>REST APIs, Authentication</p>
-                        </div>
+                    <div class="service-card-modern backend">
+                        <i class="fas fa-server"></i>
+                        <h5>Backend Development</h5>
                     </div>
 
-                    <div class="col-md-6">
-                        <div class="service-box">
-                            <i class="fas fa-mobile-alt"></i>
-                            <h5>Mobile Apps</h5>
-                            <p>React Native</p>
-                        </div>
+                    <div class="service-card-modern mobile">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h5>Mobile App Development</h5>
                     </div>
 
-                    <div class="col-md-6">
-                        <div class="service-box">
-                            <i class="fas fa-database"></i>
-                            <h5>Databases</h5>
-                            <p>SQL Server, Firebase</p>
-                        </div>
+                    <div class="service-card-modern database">
+                        <i class="fas fa-database"></i>
+                        <h5>Database Systems</h5>
                     </div>
 
                 </div>
             </div>
 
         </div>
+
     </div>
 </section>
 
@@ -212,24 +203,52 @@
             </div>
             <!-- SKILLNET -->
             <div class="col-md-4">
-                <div class="project-box">
-                    <img src="/images/project2.png">
-                    <div class="project-info">
-                        <h5>SkillNet</h5>
-                        <p>Skill Sharing Platform</p>
+                <a href="/Projects/SkillNet/1.png" class="text-decoration-none text-dark">
+                    <div class="project-box">
+                        <img src="/images/projects/SkillNet/1.png">
+                        <div class="project-info">
+                            <h5>SkillNet</h5>
+                            <p>Online Quiz Application</p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
 
             <!-- SERVELANKA -->
             <div class="col-md-4">
-                <div class="project-box">
-                    <img src="/images/project3.png">
-                    <div class="project-info">
-                        <h5>ServeLanka</h5>
-                        <p>Service Provider App</p>
+                <a href="/Projects/ServeLanka" class="text-decoration-none text-dark">
+                    <div class="project-box">
+                        <img src="/images/projects/ServeLanka/1.png">
+                        <div class="project-info">
+                            <h5>ServeLanka</h5>
+                            <p>Online Quiz Application</p>
+                        </div>
                     </div>
-                </div>
+                </a>
+            </div>
+            <!-- EMS -->
+            <div class="col-md-4">
+                <a href="/Projects/EMS" class="text-decoration-none text-dark">
+                    <div class="project-box">
+                        <img src="/images/projects/EMS/1.png">
+                        <div class="project-info">
+                            <h5> EMS </h5>
+                            <p>Education Management System</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- QuickQuiz -->
+            <div class="col-md-4">
+                <a href="/Projects/QuickQuiz" class="text-decoration-none text-dark">
+                    <div class="project-box">
+                        <img src="/images/projects/QuickQuiz/1.png">
+                        <div class="project-info">
+                            <h5>QuickQuiz</h5>
+                            <p>Online Quiz Application</p>
+                        </div>
+                    </div>
+                </a>
             </div>
 
         </div>
