@@ -4,6 +4,8 @@
 html, body {
     height: auto;
     overflow-x: hidden;
+    margin: 0;
+    padding: 0;
 }
 html {
     scroll-behavior: smooth;
@@ -13,7 +15,7 @@ html {
 /* Space for footer */
 main {
     display: block;
-    padding-bottom: 140px;
+    padding-bottom: 50px;
 }
 
 /* =========================
@@ -34,11 +36,38 @@ body {
     font-family: 'Poppins', sans-serif;
     color: var(--gray);
     background-color: var(--white);
+    animation: fadeInPage 0.8s ease-in-out;
+}
+
+@keyframes fadeInPage {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 h1, h2, h3, h4, h5 {
     color: var(--dark);
 }
+
+/* =========================
+   SCROLL ANIMATIONS
+========================= */
+.animate {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+    .animate.show {
+        opacity: 1;
+        transform: translateY(0);
+    }
 
 /* Navbar */
 
@@ -120,6 +149,7 @@ h1, h2, h3, h4, h5 {
         color: var(--dark);
     }
 
+
 /* =========================
    ABOUT
 ========================= */
@@ -127,6 +157,7 @@ h1, h2, h3, h4, h5 {
     max-width: 90%;
     border-radius: 20px;
 }
+
 
 /* =========================
    KNOWLEDGE ICONS
@@ -136,6 +167,8 @@ h1, h2, h3, h4, h5 {
     align-items: center;
     gap: 25px;
 }
+
+
 
 .knowledge-text {
     max-width: 130px;
@@ -219,7 +252,10 @@ h1, h2, h3, h4, h5 {
         height: 100%;
         background: var(--primary);
         border-radius: 10px;
+        width: 0; /* ⬅ start empty */
+        transition: width 1.4s ease; /* ⬅ animation */
     }
+
 
 
 /* =========================
@@ -333,9 +369,17 @@ h1, h2, h3, h4, h5 {
         transform: translateY(-10px);
     }
 
-.project-info {
+    .service-card-modern {
+    transition: all 0.35s ease;
+    }
+
+        .service-card-modern:hover {
+            transform: translateY(-10px) scale(1.02);
+        }
+
+    .project-info {
     padding: 16px;
-}
+    }
 /* =========================
    PROJECT IMAGE SIZE CONTROL
 ========================= */
@@ -350,6 +394,26 @@ h1, h2, h3, h4, h5 {
         border-radius: 18px;
         box-shadow: 0 15px 35px rgba(0,0,0,0.08);
     }
+
+/* =========================
+   PROJECT PAGE ENTRANCE
+========================= */
+.project-hero {
+    animation: projectEnter 0.9s ease;
+}
+
+@keyframes projectEnter {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 
 /* =========================
@@ -411,12 +475,21 @@ h1, h2, h3, h4, h5 {
    FOOTER (FIXED)
 ========================= */
 .site-footer {
-    background: #0b0f19;
+    background: linear-gradient(180deg, #0b0f19 0%, #111827 100%);
     color: #ccc;
     padding: 50px 0 20px;
-    margin-top: 100px;
+    margin-top: 10px;
     width: 100%;
 }
+
+    .site-footer::before {
+        content: "";
+        display: block;
+        height: 1px;
+        background: linear-gradient( to right, transparent, rgba(13,110,253,0.4), transparent );
+        margin-bottom: 40px;
+    }
+
 
 .footer-name {
     color: #fff;
@@ -454,19 +527,32 @@ h1, h2, h3, h4, h5 {
 }
 
 /* =========================
-   MOBILE
+   CUSTOM CURSOR
 ========================= */
-@media (max-width: 768px) {
-    .hero-img {
-        width: 280px;
-        margin-left: 0;
-    }
-
-    .section-title {
-        font-size: 28px;
-        text-align: center;
-    }
+.cursor-dot {
+    width: 8px;
+    height: 8px;
+    background: #0d6efd;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
 }
+
+.cursor-outline {
+    width: 36px;
+    height: 36px;
+    border: 2px solid rgba(13,110,253,0.4);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9998;
+    transform: translate(-50%, -50%);
+    transition: all 0.15s ease;
+}
+
+
 /* =========================
    MOBILE RESPONSIVE
 ========================= */
@@ -481,4 +567,60 @@ h1, h2, h3, h4, h5 {
         width: 100%;
         height: 200px;
     }
+/* =========================
+   HERO MOBILE FIX (WORKING)
+========================= */
+@media (max-width: 768px) {
 
+    /* Make row a flex container */
+    .hero-mobile {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* IMAGE FIRST */
+    .hero-image {
+        order: 1;
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+
+    .hero-img {
+        width: 300px; 
+        height: 300px;
+        object-fit: cover;
+        margin: 0 auto;
+        border-radius: 50%;
+    }
+
+    /* CONTENT SECOND */
+    .hero-content {
+        order: 2;
+    }
+
+    /* spacing cleanup */
+    .video-mask {
+        margin-bottom: 14px;
+    }
+
+    .hero-intro {
+        font-size: 14px;
+        margin-bottom: 16px;
+    }
+
+    .knowledge-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+    }
+
+    .knowledge-icons {
+        justify-content: center;
+        gap: 16px;
+    }
+}
+
+
+
+ 
