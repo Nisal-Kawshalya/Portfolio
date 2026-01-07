@@ -71,9 +71,7 @@
 
                         <li class="nav-item">
                             <a class="nav-link btn btn-primary text-white px-3 ms-lg-3"
-                               href="/#contact">
-                                Contact
-                            </a>
+                               href="/#contact"> Contact </a>
                         </li>
 
                     </ul>
@@ -142,5 +140,18 @@
 
     @RenderSection("Scripts", false)
 
-</body>
+    <script>
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                }
+            });
+        }, { threshold: 0.15 });
+
+        document.querySelectorAll(".animate").forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+    </body>
 </html>
