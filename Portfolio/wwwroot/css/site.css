@@ -373,26 +373,37 @@ h1, h2, h3, h4, h5 {
     transition: all 0.35s ease;
     }
 
-        .service-card-modern:hover {
-            transform: translateY(-10px) scale(1.02);
-        }
+    .service-card-modern:hover {
+    transform: translateY(-10px) scale(1.02);
+    }
 
     .project-info {
     padding: 16px;
     }
+
+    .project-hero .btn {
+    margin-top: 10px; /* move button down */
+    }
+
+    .project-back-btn {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    }
+
+
 /* =========================
    PROJECT IMAGE SIZE CONTROL
 ========================= */
 .project-image-wrapper {
-    max-width: 700px; /* ⬅ control overall size */
-    margin: 0 auto; /* center horizontally */
+    max-width: 600px; 
+    margin: 0 auto 40px; 
 }
 
     .project-image-wrapper img {
         width: 100%;
         height: auto;
-        border-radius: 18px;
-        box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+        border-radius: 16px;
+        box-shadow: 0 12px 30px rgba(0,0,0,0.08);
     }
 
 /* =========================
@@ -618,6 +629,11 @@ h1, h2, h3, h4, h5 {
     .knowledge-icons {
         justify-content: center;
         gap: 16px;
+    }
+
+    project-image-wrapper {
+        max-width: 100%;
+        padding: 0 15px;
     }
 }
 
